@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
 
   // Eğer sayfa "Home" kısmında ise butonları aktif tut
-  if (window.location.hash === "#home") {
+  if (window.location.hash === "#home" || window.location.hash === "/") {
     searchBtn.style.display = "inline-block"; // Butonları göster
     cleanBtn.style.display = "inline-block"; // Butonları göster
     searchInput.style.display = "inline-block";
