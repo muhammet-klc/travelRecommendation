@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags for Compatibility -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Internet Explorer için uyumluluk -->
+
     <!-- Global CSS -->
     <link rel="stylesheet" href="global.css" />
+
     <!-- Global JS -->
     <script defer src="travel_recommendation.js"></script>
+
+    <!-- Favicon for all devices -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Polyfills for older browsers (e.g., IE) -->
+    <!-- [Polyfill for ES6 features] -->
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=default,fetch,Array.prototype.includes"></script>
   </head>
   <body class="body">
     <!-- Navbar -->
@@ -30,7 +44,9 @@
           class="search-input"
           id="searchInput"
         />
-        <button class="search-btn" onclick="searchRecommendations()">Search</button>
+        <button class="search-btn" onclick="searchRecommendations()">
+          Search
+        </button>
         <button class="clean-btn" onclick="clearSearch()">Clean</button>
       </div>
     </nav>
@@ -39,7 +55,7 @@
     <main id="main-content">
       <!-- Dinamik içerik buraya gelecek -->
     </main>
-    
+
     <!-- Social Buttons -->
     <div class="social-buttons">
       <a href="https://facebook.com" target="_blank">
