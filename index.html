@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css" />
+    <!-- Global JS -->
+    <script defer src="travel_recommendation.js"></script>
+  </head>
+  <body class="body">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- Left -->
+      <div class="navbar-left">
+        <img src="https://placehold.co/100x100" alt="Logo" class="logo" />
+        <span class="brand-name">Travel Recommendation</span>
+      </div>
+
+      <!-- Center -->
+      <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Right -->
+      <div class="navbar-right">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="search-input"
+          id="searchInput"
+        />
+        <button class="search-btn" onclick="searchRecommendations()">Search</button>
+        <button class="clean-btn" onclick="clearSearch()">Clean</button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Dinamik içerik buraya gelecek -->
+    </main>
+    
+    <!-- Social Buttons -->
+    <div class="social-buttons">
+      <a href="https://facebook.com" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook"
+        />
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+        />
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg"
+          alt="LinkedIn"
+        />
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,384 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Sağ sola taşmayı önler */
+  overflow-y: auto; /* Aşağı yukarı kaydırma gerektiğinde izin verir */
+  font-family: Arial, sans-serif; /* Varsayılan font */
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #f9f9f9;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00bcd4;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-btn,
+.clean-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.search-btn {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.clean-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: #008c9e;
+}
+
+.clean-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Social Buttons Styling */
+.social-buttons {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-buttons a {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+.social-buttons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-buttons a:hover {
+  background-color: #555;
+}
+
+/* Main Section Styling */
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Tam ekran yüksekliği */
+  background: url("https://placehold.co/1920x1080") no-repeat center
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Arka plan resmi için karartma efekti */
+  z-index: 1;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2; /* Üstte görünmesini sağlar */
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  margin: 0 0 20px;
+}
+
+.main-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#main-content {
+  min-height: 100vh; /* Ekranın tamamını kapsar */
+  background-image: url("https://owltourism.az/wp-content/uploads/2024/05/full-shot-travel-concept-with-landmarks-scaled-3-1024x576.jpg"); /* Manzara resmini buraya ekleyin */
+  background-size: cover; /* Resmin tam ekranda görünmesini sağlar */
+  background-position: center; /* Resmin ortalanmasını sağlar */
+  background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
+  padding: 100px; /* İçerik alanı için padding */
+  color: white; /* İçerik rengini beyaz yapalım */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf koyu arka plan */
+  max-width: 50%;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+br {
+  margin-bottom: 20px;
+}
+
+/* Ekip Bölümü */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.team-member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.contact-form .submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Önerilenler Kutusu (Right Sidebar) */
+.recommendations-box {
+  min-width: 30%;
+  background-color: rgba(0, 0, 0, 0.7); /* Koyu arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 70vh; /* Yüksekliği sınırladık */
+  min-width: 50%;
+  padding-right: 10px;
+}
+
+.recommendation-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.destination-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.destination-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.destination-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.visit-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.visit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Scrollbar Stili */
+.recommendation-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.recommendation-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.recommendation-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
